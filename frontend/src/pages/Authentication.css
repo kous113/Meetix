@@ -1,0 +1,22 @@
+.auth-btn {
+    color: #7854db !important;
+    transition: 150ms;
+}
+
+.auth-btn.active {
+    background-color: #7854db !important;
+    color: white !important;
+}
+.auth-btn:hover {
+    background-color: #e3dcf8 !important;
+}
+
+.auth-btn.active:hover {
+    background-color: #6845c5 !important;
+}
+.auth-input .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #7854db;
+}
+.auth-input .MuiInputLabel-root.Mui-focused {
+    color: #7854db;
+}

@@ -1,0 +1,108 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    margin: 2rem 4rem 0;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.textfield {
+    width: 25rem;
+}
+
+.textfield .MuiOutlinedInput-root {
+    height: 2.8rem;
+}
+
+.textfield .MuiInputLabel-root.Mui-focused {
+    color: #7854db !important;
+}
+
+.textfield .MuiOutlinedInput-root.Mui-focused
+.MuiOutlinedInput-notchedOutline {
+    border-color: #7c3aed !important;
+}
+
+.nav-btn {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.join-btn {
+    background-color: #e3dcf8 !important;
+    color: #7854db !important;
+    height: 2.8rem !important;
+    width: 5.6rem !important;
+}
+
+.join-btn:hover {
+    background-color: #7854db !important;
+    color: white !important;
+}
+
+.nav-new-meeting {
+    height: 2.8rem !important;
+    width: 10rem !important;
+    background-color: #7854db !important;
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        margin: 2rem;
+    }
+
+    .textfield {
+        width: 20rem;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        margin: 1.5rem;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .textfield {
+        width: 100%;
+    }
+
+    .nav-btn {
+        width: 100%;
+        display: flex;
+    }
+
+    /* Only navbar buttons get flex: 1 */
+    .nav-btn .join-btn,
+    .nav-btn .nav-new-meeting {
+        flex: 1;
+    }
+}
+
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 500px) {
+
+    .navbar {
+        margin: 1rem;
+    }
+
+    .nav-btn {
+        flex-direction: column;
+    }
+
+    .nav-btn .join-btn,
+    .nav-btn .nav-new-meeting {
+        width: 100% !important;
+    }
+}

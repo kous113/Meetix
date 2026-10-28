@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+
+* {
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.home {
+  min-height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Header */
+
+.home-header {
+  height: 5rem;
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-logo img {
+  width: 14rem;
+  height: auto;
+  display: block;
+  margin-top: 3rem;
+}
+
+.home-auth {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.landingpage-buttons {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+.join-link{
+  text-decoration: none;
+  color: #7854db;
+  font-weight: 300;
+  transition: 500ms;
+}
+.join-link:hover{
+  font-weight: 700;
+}
+
+.create-btn {
+  color: white !important;
+  background-color: #7854db !important;
+  width: 10rem !important;
+  height: 3rem !important;
+  border-radius: 2rem !important;
+
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+
+  text-transform: none !important;
+}
+
+.create-btn:hover {
+  background-color: #6843cf !important;
+}
+
+.create-buttons a {
+  width: 10rem;
+  height: 3rem;
+  background-color: white;
+  color: #7854db;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 300;
+  transition: 500ms;
+}
+.create-buttons a:hover {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3rem;
+  height: 80vh;
+}
+h1 {
+  color: #6843cf;
+}
+h1 span {
+  font-size: 4rem;
+  color: white;
+}
+p {
+  color: #6843cf;
+  font-size: 1.2rem;
+}
+.monitor-img {
+  height: 21rem;
+  width: auto;
+}
+
+.create-btn,
+.join-btn {
+  text-decoration: none;
+  padding: 0.9rem 1.7rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.create-btn {
+  color: white;
+  background-color: #7854db;
+}
+
+.join-btn {
+  color: #7854db;
+  border: 1px solid #7854db;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .home-header {
+    padding: 0 1rem;
+  }
+
+  .home-logo img {
+    width: 7rem;
+  }
+
+  .sign-in,
+  .sign-up {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .create-btn,
+  .join-btn {
+    text-align: center;
+  }
+}

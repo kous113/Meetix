@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+/* =========================
+   CONNECT / LOBBY
+   ========================= */
+
+.connect-btn {
+  background-color: #7854db !important;
+  color: white !important;
+  margin-left: 1.5rem;
+  height: 3.5rem !important;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.input-field .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #7854db;
+}
+
+.input-field .MuiInputLabel-root.Mui-focused {
+  color: #7854db;
+}
+
+/* =========================
+   VIDEO MEETING
+   ========================= */
+
+.meetVideoContainer {
+  position: relative;
+  height: 100vh;
+  background-color: rgb(73, 73, 73);
+}
+
+.meetUserVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* Video grid */
+
+.conferenceView {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+  padding: 1rem;
+
+  width: 100%;
+  height: calc(100vh - 6rem);
+
+  box-sizing: border-box;
+
+  transition: width 400ms ease;
+}
+
+.conferenceView > div {
+  min-width: 0;
+  min-height: 0;
+}
+
+.conferenceView video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 1rem;
+}
+
+/* Shrink video area when chat is open */
+
+.chat-open .conferenceView {
+  width: calc(100% - 22rem);
+}
+
+/* =========================
+   BOTTOM CONTROL BAR
+   ========================= */
+
+.buttonContainer {
+  position: absolute;
+
+  text-align: center;
+
+  bottom: 1.5rem;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 22rem;
+  height: 4rem;
+
+  align-content: center;
+
+  border-radius: 2rem;
+
+  background-color: rgb(89, 88, 88);
+}
+
+.call-end {
+  color: #930000;
+}
+
+.call-end:hover {
+  color: #ff0000;
+}
+
+.meet-controls {
+  color: rgb(160, 160, 160);
+  transition: color 500ms ease !important;
+}
+
+.buttonContainer .MuiIconButton-root:hover .meet-controls {
+  color: white;
+}
+
+.buttonContainer svg {
+  font-size: 2.1rem;
+}
+
+.buttonContainer .MuiIconButton-root {
+  transition: transform 300ms ease;
+}
+
+.buttonContainer .MuiIconButton-root:hover {
+  transform: scale(1.2);
+}
+
+/* =========================
+   CHAT BOX
+   ========================= */
+
+.chatroom {
+  position: absolute;
+
+  right: 0;
+  bottom: 5rem;
+
+  width: 20rem;
+  height: 33rem;
+
+  margin: 0.5rem;
+  padding: 1rem;
+
+  box-sizing: border-box;
+
+  background: #eeeaf9;
+  border-radius: 1rem;
+
+  overflow: hidden;
+
+  transform-origin: bottom right;
+  animation: chatBounce 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes chatBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(40px);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.02) translateY(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+/* =========================
+   CHAT CONTAINER
+   ========================= */
+
+.chatcontainer {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   CHAT HEADING
+   ========================= */
+
+.chatcontainer h2 {
+  flex-shrink: 0;
+
+  margin: 0.2rem 0 0.8rem 0;
+}
+
+
+/* =========================
+   MESSAGE DISPLAY
+   ========================= */
+
+.chattingDisplay {
+  flex: 1;
+
+  min-height: 0;
+
+  width: 100%;
+
+  padding: 0.5rem;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   SCROLLBAR
+   ========================= */
+
+.chhatingDisplay::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chhatingDisplay::-webkit-scrollbar-thumb {
+  background: #b9a5ed;
+  border-radius: 10px;
+}
+
+.chhatingDisplay::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* =========================
+   MY MESSAGE
+   ========================= */
+
+.my-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  width: fit-content;
+  max-width: 75%;
+
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 1rem;
+
+  padding: 0.5rem 1rem;
+
+  box-sizing: border-box;
+
+  background: #e1d8fb;
+
+  border-radius: 0.5rem;
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+
+/* =========================
+   OTHER MESSAGE
+   ========================= */
+
+.other-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: fit-content;
+  max-width: 75%;
+
+  margin-left: 0;
+  margin-right: auto;
+  margin-bottom: 1rem;
+
+  padding: 0.5rem 1rem;
+
+  box-sizing: border-box;
+
+  background: #cab7ff;
+
+  border-radius: 0.5rem;
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+
+/* =========================
+   MESSAGE TEXT
+   ========================= */
+
+.title {
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  color: black;
+
+  margin: 0;
+}
+
+.message {
+  font-size: 0.9rem;
+  font-weight: 400;
+
+  color: black;
+
+  margin: 0.2rem 0 0 0;
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.my-message .title,
+.my-message .message {
+  text-align: right;
+}
+
+.other-message .title,
+.other-message .message {
+  text-align: left;
+}
+
+
+/* =========================
+   CHAT INPUT
+   ========================= */
+
+.chattingArea {
+  flex-shrink: 0;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  padding-top: 0.8rem;
+
+  box-sizing: border-box;
+}
+
+
+/* Input */
+
+.chattingArea .MuiTextField-root {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.chattingArea .MuiOutlinedInput-root {
+  height: 3.2rem;
+}
+
+
+/* Input border */
+
+.chattingArea .MuiOutlinedInput-notchedOutline {
+  border-color: #7854db;
+}
+
+.chattingArea
+  .MuiOutlinedInput-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #7854db;
+}
+
+.chattingArea
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #7854db;
+  border-width: 2px;
+}
+
+.chattingArea .MuiInputLabel-root.Mui-focused {
+  color: #7854db;
+}
+
+
+/* =========================
+   SEND BUTTON
+   ========================= */
+
+.chattingArea .MuiIconButton-root {
+  width: 3.2rem;
+  height: 3.2rem;
+
+  flex-shrink: 0;
+
+  background-color: #7854db;
+  color: white;
+}
+
+.chattingArea .MuiIconButton-root:hover {
+  background-color: #6541c4;
+}
+
+.preview-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.preview-input {
+  width: 300px;
+}
+
+.preview-btn {
+  height: 56px;
+}
+
+.preview-video {
+  width: 62rem;
+  height: 37rem;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #111;
+}
+
+.preview-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

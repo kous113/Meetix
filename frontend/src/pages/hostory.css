@@ -1,0 +1,369 @@
+.history-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f8f9fd;
+  color: #15234b;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+
+.history-sidebar {
+  width: 270px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 15px;
+  background: #fff;
+  border-right: 1px solid #e7eaf4;
+}
+
+.history-logo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0 15px;
+  margin-bottom: 32px;
+  font-size: 29px;
+  font-weight: 750;
+  color: #15234b;
+}
+
+.history-logo-icon {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #6155ff;
+  color: white;
+}
+
+.history-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.history-nav button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 15px 19px;
+  border: none;
+  border-radius: 11px;
+  background: transparent;
+  color: #26365e;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.history-nav button:hover {
+  background: #f5f4ff;
+}
+
+.history-nav button.active {
+  background: #efedff;
+  color: #6155ff;
+  font-weight: 600;
+}
+
+.nav-icon {
+  width: 24px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.history-sidebar-footer {
+  margin: auto 15px 12px;
+  color: #8290b0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Main area */
+
+.history-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.history-topbar {
+  height: 62px;
+  padding: 0 38px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 11px;
+  background: #fff;
+  border-bottom: 1px solid #e7eaf4;
+  font-size: 14px;
+}
+
+.history-user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  color: #fff;
+  background: #6155ff;
+  font-size: 17px;
+}
+
+.history-chevron {
+  color: #7e8bad;
+}
+
+.history-content {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 28px 42px 50px;
+}
+
+.history-eyebrow {
+  color: #6155ff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.history-content h1 {
+  margin: 8px 0 5px;
+  font-size: clamp(30px, 3vw, 40px);
+  letter-spacing: -1px;
+  color: #15234b;
+}
+
+.history-description {
+  max-width: 650px;
+  margin: 0;
+  color: #7b8db5;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Search */
+
+.history-search {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 51px;
+  margin: 19px 0 39px;
+  padding: 0 17px;
+  border: 1px solid #dce4f6;
+  border-radius: 11px;
+  background: #fff;
+  color: #8798bd;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.history-search:focus-within {
+  border-color: #766aff;
+  box-shadow: 0 0 0 3px #6155ff12;
+}
+
+.history-search input {
+  flex: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #15234b;
+  font-size: 15px;
+}
+
+.history-search input::placeholder {
+  color: #8798bd;
+}
+
+/* Meeting list */
+
+.history-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.history-section-header h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.history-section-header > span {
+  color: #7b8db5;
+  font-size: 14px;
+}
+
+.history-meetings {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-meeting-card {
+  min-height: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 25px;
+  border: 1px solid #e0e7f6;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 5px #1c315008;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.history-meeting-card:hover {
+  border-color: #c9c4ff;
+  transform: translateY(-1px);
+}
+
+.history-meeting-code {
+  overflow-wrap: anywhere;
+  color: #15234b;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.history-meeting-date {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #7185b0;
+  font-size: 14px;
+}
+
+.history-meeting-date svg {
+  flex-shrink: 0;
+}
+
+/* Empty state */
+
+.history-empty {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border: 1px dashed #dce4f6;
+  border-radius: 13px;
+  background: #fff;
+  text-align: center;
+}
+
+.history-empty-icon {
+  margin-bottom: 15px;
+  color: #8175ff;
+  font-size: 45px;
+}
+
+.history-empty h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.history-empty p {
+  margin: 0;
+  color: #8290b0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Responsive layout */
+
+@media (max-width: 800px) {
+  .history-sidebar {
+    width: 205px;
+  }
+
+  .history-logo {
+    padding: 0 8px;
+    font-size: 24px;
+  }
+
+  .history-content {
+    padding: 25px 22px 40px;
+  }
+
+  .history-topbar {
+    padding: 0 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .history-layout {
+    flex-direction: column;
+  }
+
+  .history-sidebar {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+    border-right: none;
+    border-bottom: 1px solid #e7eaf4;
+  }
+
+  .history-logo {
+    margin-bottom: 16px;
+  }
+
+  .history-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .history-nav button {
+    width: auto;
+    padding: 10px;
+    gap: 7px;
+    font-size: 13px;
+  }
+
+  .nav-icon {
+    width: auto;
+    font-size: 19px;
+  }
+
+  .history-sidebar-footer {
+    display: none;
+  }
+
+  .history-topbar {
+    height: 55px;
+  }
+
+  .history-content {
+    padding: 25px 16px 35px;
+  }
+
+  .history-description {
+    font-size: 14px;
+  }
+
+  .history-search {
+    margin-bottom: 28px;
+  }
+
+  .history-meeting-card {
+    min-height: 78px;
+    padding: 15px 18px;
+  }
+
+  .history-meeting-code {
+    font-size: 17px;
+  }
+}

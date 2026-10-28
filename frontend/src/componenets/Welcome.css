@@ -1,0 +1,58 @@
+.banner {
+    margin: 3rem 4rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
+
+    background-color: rgb(232, 232, 232);
+    border-radius: 1rem;
+}
+
+.banner p {
+    margin: 0;
+}
+
+.banner p span {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #7854db;
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    .banner {
+        margin: 2rem;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+
+    .banner {
+        margin: 1.5rem;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .banner p span {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 500px) {
+
+    .banner {
+        margin: 1rem;
+    }
+
+    .banner p span {
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+.sidebar {
+  width: 16rem;
+  min-width: 16rem;
+
+  height: 100%;
+
+  background-color: #e3dcf7;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 0.5rem;
+}
+
+.logo-img {
+  width: 14rem;
+  height: 14rem;
+  object-fit: contain;
+}
+
+.sidebar-items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+}
+
+.ele {
+  text-decoration: none;
+  color: #7854db;
+  border: none;
+  border-radius: 2rem;
+  text-align: center;
+  width: 11rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 500ms;
+}
+
+.history-link {
+  background-color: #edeaf7;
+  border: 2px solid white;
+}
+
+.history-link:hover {
+  background-color: #ddd5f8;
+  border: 2px solid #7854db;
+}
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 13rem;
+    min-width: 13rem;
+  }
+
+  .logo-img {
+    width: 11rem;
+    height: 11rem;
+  }
+
+  .sidebar-items {
+    font-size: 1rem;
+  }
+
+  .ele {
+    width: 9rem;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+  .main-area {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    height: auto;
+
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .logo-img {
+    width: 6rem;
+    height: 4rem;
+    object-fit: contain;
+  }
+
+  .sidebar-items {
+    width: auto;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .ele {
+    width: auto;
+    min-width: 5rem;
+    height: 2.2rem;
+    padding: 0 0.8rem;
+  }
+
+  .history-link {
+    margin-top: 0;
+  }
+}
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 500px) {
+  .sidebar {
+    padding: 0.5rem;
+  }
+
+  .logo-img {
+    width: 5rem;
+    height: 3.5rem;
+  }
+
+  .sidebar-items {
+    gap: 0.3rem;
+  }
+
+  .ele {
+    min-width: auto;
+    padding: 0 0.6rem;
+    font-size: 0.85rem;
+  }
+}

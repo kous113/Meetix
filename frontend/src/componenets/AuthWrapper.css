@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.authwrapper {
+    width: 100%;
+    height: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.headinglogo {
+    width: 10rem;
+    height: 2rem;
+    object-fit: contain;
+}
+
+.sign {
+    position: absolute;
+    right: 2rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.log-out {
+    color: #7854db !important;
+    border-color: #7854db !important;
+}
+
+.log-out:hover {
+    background-color: #e3dcf8 !important;
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 768px) {
+
+    .authwrapper {
+        height: 4.5rem;
+    }
+
+    .headinglogo {
+        width: 8rem;
+        height: auto;
+    }
+
+    .sign {
+        right: 1rem;
+    }
+}
+
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 500px) {
+
+    .authwrapper {
+        justify-content: flex-start;
+        padding-left: 1rem;
+    }
+
+    .headinglogo {
+        width: 7rem;
+    }
+
+    .sign {
+        right: 0.75rem;
+    }
+
+    .log-out {
+        font-size: 0.75rem !important;
+        padding: 0.4rem 0.7rem !important;
+    }
+}
