@@ -17,11 +17,14 @@ const withAuth = (WrappedComponent) => {
         }
 
         try {
-          await axios.get("http://localhost:8000/users/validate-user", {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          });
+          await axios.get(
+            `${import.meta.env.VITE_API_URL}/validate-user`,
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
 
           setLoading(false);
         } catch (error) {
