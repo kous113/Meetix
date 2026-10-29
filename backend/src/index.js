@@ -6,6 +6,7 @@ import cors from "cors";
 
 import pool from "./config/db.js";
 import createTable from "./models/usermodel.js";
+import createMeetTable from "./models/meetingmodel.js";
 import userRoutes from "./routes/user.routes.js";
 
 import { connectToSocket } from "./controllers/socketManager.js";
@@ -33,13 +34,23 @@ app.get("/", async (req, res) => {
   }
 });
 
-// Create database tables
-createTable();
+// Start server after creating database tables
+const startServer = async () => {
+  try {
+    await createTable();
+    await createMeetTable();
 
-// Attach Socket.IO to the HTTP server
-const io = connectToSocket(server);
+    // Attach Socket.IO to the HTTP server
+    connectToSocket(server);
 
-// Start server
-server.listen(port, () => {
-  console.log(`server listening on port ${port}`);
-});
+    // Start server
+    server.listen(port, () => {
+      console.log(`server listening on port ${port}`);
+    });
+  } catch (err) {
+    console.error("Failed to initialize database tables:", err);
+    process.exit(1);
+  }
+};
+
+startServer();
