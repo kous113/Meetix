@@ -17,6 +17,7 @@
     "@mui/styled-engine-sc": "^9.3.0",
     "axios": "^1.20.0",
     "http-status": "^2.1.0",
+    "mediasoup-client": "^3.25.3",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.2",

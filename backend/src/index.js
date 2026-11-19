@@ -14,7 +14,7 @@ import { connectToSocket } from "./controllers/socketManager.js";
 const app = express();
 const server = createServer(app);
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 // Middleware
 app.use(express.json());

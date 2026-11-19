@@ -18,12 +18,12 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./Videomeet.css";
 import { height, width } from "@mui/system";
 
-const server_url = "http://localhost:8000";
+const server_url = "https://meetix-backend-bb4b.onrender.com";
 
 var connections = {};
 
 var peerConfigConnections = {
-  iceservers: [{ urls: "stun:stun.l.google.com:19302" }],
+  iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
 };
 
 export default function VideoMeetComponent() {
@@ -293,9 +293,10 @@ useEffect(() => {
 }, [showModal]);
 
 
-
   let connectToSocketServer = () => {
-    socketRef.current = io.connect(server_url, { secure: false });
+      socketRef.current = io(server_url, {
+          transports: ["websocket", "polling"],
+      });
     socketRef.current.on("signal", gotMessageFromServer);
 
     socketRef.current.on("connect", () => {
@@ -305,7 +306,7 @@ useEffect(() => {
       socketRef.current.on("user-left", (id) => {
         setVideo((videos) =>
           videos.filter((videos) => {
-            video.socketId != id;
+            video.socketId !== id;
           }),
         );
       });
