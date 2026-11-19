@@ -14,11 +14,12 @@ import Badge from "@mui/material/Badge";
 import InboxIcon from "@mui/icons-material/Inbox";
 import SendIcon from '@mui/icons-material/Send';
 import { useNavigate, useParams } from "react-router-dom";
+import server from "../environment";
 
 import "./Videomeet.css";
 import { height, width } from "@mui/system";
 
-const server_url = "https://meetix-backend-bb4b.onrender.com";
+const server_url = server;
 
 var connections = {};
 
